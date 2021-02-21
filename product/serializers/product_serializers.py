@@ -13,6 +13,7 @@ class ProductSerializers(serializers.ModelSerializer):
             'category'
 
         ]
+        depth = 1
 
 
 class ProductUpdateCreateSerializers(serializers.ModelSerializer):
