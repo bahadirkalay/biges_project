@@ -1,0 +1,1 @@
+from .shop_card_serializers import ShopCardSerializer

@@ -11,6 +11,7 @@ class GameModel(models.Model):
     year = models.IntegerField(verbose_name="Yıl")
     category = models.ManyToManyField(CategoryModel , verbose_name="Kategori Adı")
     slug = AutoSlugField(populate_from="name", unique=True)
+    price = models.IntegerField(null=True)
 
     class Meta:
         verbose_name = 'Oyun'
