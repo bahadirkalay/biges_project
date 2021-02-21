@@ -1,1 +1,2 @@
 from .product_api_views import ProductListApiView
+from .product_api_views import ProductCreatedView

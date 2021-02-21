@@ -2,9 +2,11 @@ from django.db import models
 from autoslug import AutoSlugField
 import datetime
 from product.models import CategoryModel
+from django.contrib.auth.models import User
 # Create your models here.
 
 class GameModel(models.Model):
+    user = models.ForeignKey(User, on_delete= models.CASCADE , null=True)
     name = models.CharField(max_length=80, blank=False, null=False ,verbose_name="Oyunun Adı")
     year = models.IntegerField(verbose_name="Yıl")
     category = models.ManyToManyField(CategoryModel , verbose_name="Kategori Adı")
